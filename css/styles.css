@@ -1,0 +1,602 @@
+/*
+    font-family: 'Anton', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Dancing Script', cursive;
+*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  background-color: #69401f;
+}
+.nav-button {
+  margin-top: 10px;
+  margin-left: 40px;
+  color: white;
+  text-decoration: none;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  text-shadow: 2px 2px 1px black;
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+}
+.nav-button:after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px white;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+  transform-origin: 100% 50%;
+}
+.nav-button:hover:after {
+  transform: scaleX(1);
+  transform-origin: 0 50%;
+}
+#banner-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+    url("../images/restaurant-image.jpg");
+  height: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  box-shadow: 0px 2px 4px black;
+}
+
+#banner-container-text {
+  text-shadow: 2px 2px 1px black;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+#banner-header {
+  text-shadow: 2px 2px 1px black;
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+}
+#banner-text {
+  margin-bottom: 15px;
+  font-family: "Mali", cursive;
+}
+.button {
+  border: 0;
+  background: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  outline: none;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Oswald", sans-serif;
+}
+
+.button::before,
+.button::after {
+  box-sizing: inherit;
+  position: absolute;
+  content: "";
+  border: 2px solid transparent;
+  width: 0;
+  height: 0;
+}
+
+.button::after {
+  bottom: 0;
+  right: 0;
+}
+
+.button::before {
+  top: 0;
+  left: 0;
+}
+
+.button:hover::before,
+.button:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.button:hover::before {
+  border-top-color: white;
+  border-right-color: white;
+  transition: width 0.3s ease-out, height 0.3s ease-out 0.3s;
+}
+
+.button:hover::after {
+  border-bottom-color: white;
+  border-left-color: white;
+  transition: border-color 0s ease-out 0.6s, width 0.3s ease-out 0.6s,
+    height 0.3s ease-out 1s;
+}
+
+#restourant-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 90px;
+}
+.restourant-image {
+  height: 150px;
+  margin-top: 20px;
+  margin-right: 20px;
+  box-shadow: 2px 2px 4px black;
+}
+
+.restaurant-text {
+  margin-top: 10px;
+  width: 220px;
+  text-align: left;
+  font-family: "Mali", cursive;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
+.restaurant {
+  margin-top: 40px;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.restaurant-header {
+  margin-top: 10px;
+  margin-left: -0px;
+  font-family: "Dancing Script", cursive;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+#menu-header {
+  font-family: "Roboto Condensed", sans-serif;
+  margin-top: 40px;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+#menu-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.9);
+}
+.menu-item-container {
+  margin-top: 10px;
+  margin-right: 30px;
+  margin-bottom: 40px;
+}
+
+.menu-header {
+  margin-top: 10px;
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+.menu-text {
+  margin-top: 10px;
+  width: 220px;
+  text-align: left;
+  font-family: "Mali", cursive;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
+.menu-image {
+  height: 50px;
+  width: 50px;
+  display: block;
+  margin: auto;
+}
+
+#chef-image {
+  height: 55px;
+  width: 55px;
+}
+#special-offer-image-one {
+  height: 60px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#special-offer-image-two {
+  height: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#special-offer-image-three {
+  height: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#special-offer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+    url("../images/shutterstock_1435374326.0.webp");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 40px;
+  box-shadow: 0px 2px 4px black;
+}
+.special-offer-text {
+  margin-top: 10px;
+  width: 220px;
+  font-family: "Mali", cursive;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 1px black;
+}
+#special-offer-container-part-right {
+  margin-left: 200px;
+  transition: transform 500ms ease;
+}
+#special-offer-container-part-center {
+  transition: transform 500ms ease;
+}
+#special-offer-container-part-left {
+  margin-top: 20px;
+  margin-right: 200px;
+  transition: transform 500ms ease;
+}
+#special-offer-container-part-right:hover {
+  transform: scale(1.2);
+}
+#special-offer-container-part-center:hover {
+  transform: scale(1.2);
+}
+#special-offer-container-part-left:hover {
+  transform: scale(1.2);
+}
+.special-offer-header {
+  text-shadow: 2px 2px 1px black;
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  color: white;
+}
+.media-image-one {
+  height: 30px;
+  position: absolute;
+  margin-left: 40px;
+}
+.media-image-two {
+  height: 30px;
+  position: absolute;
+}
+.first-media-container-text {
+  margin-top: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+  width: 220px;
+  font-family: "Mali", cursive;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+#media-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.second-media-container-text {
+  margin-top: 10px;
+  width: 220px;
+  font-family: "Mali", cursive;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+#media-text-container-one {
+  font-family: "Dancing Script", cursive;
+  margin-bottom: -2px;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+#media-text-container-two {
+  font-family: "Mali", cursive;
+
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+#media-text-container-three {
+  font-family: "Oswald", sans-serif;
+  margin-top: -2px;
+  font-size: 30px;
+  text-align: center;
+}
+#media-text-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+#first-media-container-part-one {
+  margin-bottom: 30px;
+}
+#second-media-container-part-one {
+  margin-bottom: 30px;
+}
+.first-media-container-part {
+  margin-right: 20px;
+}
+#meals-header {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+.media-header-one {
+  font-family: "Dancing Script", cursive;
+  margin-bottom: -10px;
+  margin-left: 86px;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+.media-header-two {
+  font-family: "Dancing Script", cursive;
+  margin-bottom: -10px;
+  margin-left: 50px;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+#food-images-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.food-images {
+  height: 200px;
+  width: 250px;
+  margin-right: 30px;
+  box-shadow: 0px 0px 6px black;
+}
+#drink-container-header {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+#drinks-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.drink-image {
+  height: 40px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.drinks-header {
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  margin-bottom: -10px;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  transform: scale(0.9);
+}
+.drinks-text {
+  font-family: "Mali", cursive;
+  text-align: center;
+  width: 200px;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  transform: scale(0.9);
+}
+.drink-container-part {
+  margin-right: 40px;
+  background-color: rgba(139, 82, 16, 0.7);
+  border-radius: 25px;
+  box-shadow: 2px 2px 7px rgb(0, 0, 0);
+  transition: transform 500ms ease;
+}
+.drink-container-part:hover {
+  transform: scale(1.1);
+}
+#all-meals-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.meal-container {
+  position: relative;
+  height: 200px;
+  width: 280px;
+  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#meal-container-one {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url(../images/cevapi.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 40px;
+  box-shadow: 2px 2px 4px black;
+}
+#meal-container-two {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url(../images/snicle.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 2px 2px 4px black;
+}
+#meal-container-three {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url(../images/makarone.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 2px 2px 4px black;
+}
+#drinks-and-meals-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.meal-header {
+  color: white;
+  margin-top: 60px;
+  font-family: "Dancing Script", cursive;
+  text-shadow: 2px 2px 2px black;
+}
+.details-button {
+  display: inline-block;
+  vertical-align: middle;
+  margin: auto;
+  position: relative;
+  padding: 0.25em 1em;
+  border-top: solid 2px white;
+  border-bottom: solid 2px white;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 80px;
+}
+.details-button:before,
+.details-button:after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  width: 2px;
+  height: -webkit-calc(100% + 14px);
+  height: calc(100% + 14px);
+  background-color: white;
+  transition: 0.3s;
+}
+.details-button:before {
+  left: 7px;
+}
+.details-button:after {
+  right: 7px;
+}
+.details-button:hover:before {
+  top: 0px;
+  left: 0;
+  height: 100%;
+}
+.details-button:hover:after {
+  top: 0px;
+  right: 0;
+  height: 100%;
+}
+.meal-text {
+  text-align: center;
+  position: absolute;
+  top: 73%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  font-family: "Mali", cursive;
+}
+#botbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgba(139, 82, 16, 0.7);
+  text-shadow: 0px 0px 7px black;
+  height: 300px;
+}
+.botbar-images {
+  height: 30px;
+  width: 50px;
+}
+#galery-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#galery-header {
+  font-family: "Oswald", sans-serif;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 2px black;
+}
+#galery-main-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  margin-top: 50px;
+  margin-right: 40px;
+}
+.botbar-images-container {
+  margin-right: 5px;
+}
+#contact-header {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+#contact-text {
+  color: white;
+  font-family: "Mali", cursive;
+  text-align: center;
+  text-shadow: 2px 2px 2px black;
+}
+#about-header {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+#about-text {
+  text-align: center;
+  color: white;
+  font-family: "Mali", cursive;
+  width: 200px;
+  text-shadow: 2px 2px 2px black;
+}
+#about-container {
+  margin-top: 50px;
+}
+#contact-container {
+  margin-top: 50px;
+}
