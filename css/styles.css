@@ -11,9 +11,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+#menuToggle {
+  display: none;
+}
 body,
 html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
   height: 100%;
   background-color: #69401f;
 }
@@ -28,6 +32,7 @@ html {
   position: relative;
   text-decoration: none;
   display: inline-block;
+  transform: scale(1.3);
 }
 .nav-button:after {
   display: block;
@@ -50,6 +55,7 @@ html {
   background-size: cover;
   position: relative;
   box-shadow: 0px 2px 4px black;
+  transform: scale(1);
 }
 
 #banner-container-text {
@@ -65,10 +71,13 @@ html {
   text-shadow: 2px 2px 1px black;
   font-family: "Dancing Script", cursive;
   font-size: 40px;
+  margin-bottom: 15px;
+  transform: scale(1.5);
 }
 #banner-text {
   margin-bottom: 15px;
   font-family: "Mali", cursive;
+  transform: scale(1.5);
 }
 .button {
   border: 0;
@@ -128,7 +137,10 @@ html {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 90px;
+  margin-top: 40px;
+
+  margin-bottom: 150px;
+  transform: scale(1.2);
 }
 .restourant-image {
   height: 150px;
@@ -145,7 +157,10 @@ html {
   color: white;
   text-shadow: 2px 2px 2px black;
 }
-
+#second-restourant {
+  margin-left: 60px;
+  margin-right: 90px;
+}
 .restaurant {
   margin-top: 40px;
   margin-right: 30px;
@@ -168,20 +183,27 @@ html {
   text-align: center;
   color: white;
   text-shadow: 2px 2px 2px black;
+  transform: scale(1);
+  margin-bottom: 40px;
 }
+
 #menu-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  transform: scale(0.9);
+  transform: scale(1.2);
+  margin-bottom: 100px;
 }
 .menu-item-container {
   margin-top: 10px;
   margin-right: 30px;
   margin-bottom: 40px;
 }
-
+#menu-item-container-chef {
+  margin-right: 100px;
+  margin-left: 100px;
+}
 .menu-header {
   margin-top: 10px;
   font-family: "Dancing Script", cursive;
@@ -238,8 +260,15 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 150px;
   box-shadow: 0px 2px 4px black;
+}
+.special-offer-container-part {
+  transform: scale(1.3);
+  transition: transform 500ms ease;
+}
+.special-offer-container-part:hover {
+  transform: scale(1.5);
 }
 .special-offer-text {
   margin-top: 10px;
@@ -251,25 +280,12 @@ html {
 }
 #special-offer-container-part-right {
   margin-left: 200px;
-  transition: transform 500ms ease;
-}
-#special-offer-container-part-center {
-  transition: transform 500ms ease;
 }
 #special-offer-container-part-left {
   margin-top: 20px;
   margin-right: 200px;
-  transition: transform 500ms ease;
 }
-#special-offer-container-part-right:hover {
-  transform: scale(1.2);
-}
-#special-offer-container-part-center:hover {
-  transform: scale(1.2);
-}
-#special-offer-container-part-left:hover {
-  transform: scale(1.2);
-}
+
 .special-offer-header {
   text-shadow: 2px 2px 1px black;
   font-family: "Dancing Script", cursive;
@@ -300,7 +316,8 @@ html {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 150px;
+  transform: scale(1.2);
 }
 .second-media-container-text {
   margin-top: 10px;
@@ -371,8 +388,9 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 50px;
+  margin-bottom: 150px;
+  transform: scale(1.2);
 }
 .food-images {
   height: 200px;
@@ -385,6 +403,7 @@ html {
   text-align: center;
   color: white;
   text-shadow: 2px 2px 2px black;
+  margin-bottom: 20px;
 }
 #drinks-container {
   margin-top: 40px;
@@ -393,8 +412,11 @@ html {
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  transform: scale(1.2);
 }
-
+#drink-container-part-one {
+  margin-left: 40px;
+}
 .drink-image {
   height: 40px;
   margin-top: 20px;
@@ -431,9 +453,12 @@ html {
 }
 #all-meals-container {
   display: flex;
+  margin-top: 60px;
+  margin-bottom: 40px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  transform: scale(1.2);
 }
 .meal-container {
   position: relative;
@@ -536,6 +561,7 @@ html {
 }
 #botbar-container {
   display: flex;
+
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
@@ -552,6 +578,8 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 50px;
+  margin-right: 30px;
 }
 #galery-header {
   font-family: "Oswald", sans-serif;
@@ -565,6 +593,7 @@ html {
   margin-left: 40px;
   margin-top: 50px;
   margin-right: 40px;
+  transform: scale(1.3);
 }
 .botbar-images-container {
   margin-right: 5px;
@@ -596,7 +625,495 @@ html {
 }
 #about-container {
   margin-top: 50px;
+  transform: scale(1.3);
 }
 #contact-container {
   margin-top: 50px;
+  transform: scale(1.3);
+}
+
+@media screen and (max-width: 768px) {
+  #menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a {
+    text-decoration: none;
+    color: #69401f;
+    transition: color 0.3s ease;
+  }
+
+  #menuToggle a:hover {
+    color: #af5b16;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+  }
+
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background-color: #69401f;
+  }
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+  #menu {
+    position: absolute;
+    width: 768px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    opacity: 0.9;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+  #menu li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+
+  #menuToggle input:checked ~ ul {
+    transform: none;
+  }
+  .sidenav-desktop {
+    display: none;
+  }
+  .nav-button {
+    display: none;
+  }
+  #banner-container {
+    margin-bottom: 20px;
+  }
+  #restourant-container {
+    margin-top: -40px;
+    transform: scale(0.9);
+  }
+  #second-restourant {
+    margin-left: 0px;
+    margin-right: 30px;
+  }
+  #first-restourant {
+    margin-left: 50px;
+  }
+  #menu-container {
+    transform: scale(0.9);
+    margin-bottom: 50px;
+  }
+  #menu-header {
+    margin-top: -100px;
+    transform: scale(0.9);
+    margin-bottom: -0px;
+  }
+  #menu-item-container-chef {
+    margin-left: 30px;
+    margin-right: 50px;
+  }
+  #menu-container-drink {
+    margin-left: 50px;
+  }
+  #special-offer-container {
+    margin-bottom: 50px;
+  }
+  .special-offer-container-part {
+    transform: scale(0.9);
+  }
+  #special-offer-container-part-right {
+    margin-left: 20px;
+  }
+  #special-offer-container-part-left {
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  .special-offer-container-part:hover {
+    transform: scale(1.1);
+  }
+  #media-container {
+    transform: scale(0.9);
+    margin-bottom: 50px;
+  }
+  #food-images-container {
+    transform: scale(0.9);
+    margin-top: 20px;
+    margin-bottom: 70px;
+  }
+  .food-images {
+    height: 100px;
+    width: 150px;
+    margin-right: 30px;
+    box-shadow: 0px 0px 6px black;
+  }
+  #drinks-container {
+    transform: scale(0.85);
+    margin-top: -0px;
+  }
+  .drink-container-part {
+    margin-right: 20px;
+  }
+  #drink-container-part-one {
+    margin-left: 20px;
+  }
+  #all-meals-container {
+    transform: scale(0.83);
+    margin-top: -30px;
+  }
+  .meal-container {
+    margin-right: 20px;
+  }
+  #meal-container-one {
+    margin-left: 20px;
+  }
+  #about-container {
+    transform: scale(1.1);
+  }
+  #contact-container {
+    transform: scale(1.1);
+  }
+  #galery-main-container {
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a {
+    text-decoration: none;
+    color: #69401f;
+    transition: color 0.3s ease;
+  }
+
+  #menuToggle a:hover {
+    color: #af5b16;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+  }
+
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background-color: #69401f;
+  }
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+  #menu {
+    position: absolute;
+    width: 425px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    opacity: 0.9;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+  #menu li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+
+  #menuToggle input:checked ~ ul {
+    transform: none;
+  }
+  .sidenav-desktop {
+    display: none;
+  }
+  .nav-button {
+    display: none;
+  }
+  #banner-header {
+    font-size: 21px;
+  }
+  #banner-text {
+    font-size: 11px;
+    margin-top: -5px;
+  }
+  #banner-container {
+    margin-bottom: 20px;
+  }
+  #restourant-container {
+    margin-top: -30px;
+    transform: scale(1);
+    flex-direction: column;
+  }
+  #second-restourant {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #first-restourant {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #third-restourant {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #menu-container {
+    transform: scale(1);
+    margin-bottom: 50px;
+    flex-direction: column;
+  }
+  #menu-header {
+    margin-top: -100px;
+    transform: scale(0.8);
+    margin-bottom: -0px;
+  }
+  #menu-item-container-chef {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #menu-container-drink {
+    margin-top: 30px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #menu-item-container-restaurant {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #special-offer-container {
+    margin-bottom: 50px;
+    height: 1000px;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+      url("../images/restaurant-image.jpg");
+  }
+  .special-offer-container-part {
+    transform: scale(1);
+  }
+
+  #special-offer-container-part-right {
+    margin-left: 0px;
+    margin-top: 15px;
+  }
+  #special-offer-container-part-left {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 15px;
+  }
+  .special-offer-container-part:hover {
+    transform: scale(1.1);
+  }
+  #media-container {
+    margin-top: -20px;
+    transform: scale(0.7);
+    margin-bottom: 50px;
+    flex-direction: column;
+  }
+  #media-text-container {
+    margin-top: -40px;
+    margin-bottom: 20px;
+  }
+  #first-media-container {
+    display: flex;
+    flex-direction: row;
+  }
+  #second-media-container {
+    display: flex;
+    flex-direction: row;
+  }
+  #first-media-container-part-one {
+    margin-right: -30px;
+    margin-left: 20px;
+  }
+  #second-media-container-part-one {
+    margin-right: 30px;
+    margin-left: 0px;
+  }
+  #meals-header {
+    margin-top: -70px;
+    margin-bottom: 100px;
+  }
+  #food-images-container {
+    transform: scale(2);
+    flex-direction: column;
+    margin-top: 340px;
+    margin-bottom: 340px;
+  }
+  #spagheti-image {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .food-images {
+    height: 100px;
+    width: 150px;
+    margin-right: 0px;
+    box-shadow: 0px 0px 6px black;
+    margin-bottom: 10px;
+  }
+  #drinks-container {
+    transform: scale(0.7);
+    margin: -30px auto;
+    margin-bottom: 200px;
+    width: 400px;
+    height: 400px;
+    margin-left: 0px;
+    margin-right: 0px;
+    display: grid;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 200px 200px;
+    grid-row: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+  .drink-container-part {
+    margin-right: 0px;
+  }
+  #drink-container-part-one {
+    margin-left: 0px;
+  }
+  #all-meals-container {
+    transform: scale(1.1);
+    margin-top: -30px;
+    flex-direction: column;
+  }
+  .meal-container {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  #meal-container-one {
+    margin-left: 0px;
+  }
+  #meal-container-three {
+    margin-bottom: 80px;
+  }
+
+  #botbar-container {
+    flex-direction: column;
+    align-items: center;
+    height: 740px;
+  }
+  .botbar-images {
+    height: 30px;
+    width: 50px;
+  }
+
+  .botbar-images-container {
+    margin-right: 5px;
+  }
+
+  #galery-container {
+    flex-direction: column;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  #galery-main-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+    margin-top: 50px;
+    margin-right: 0px;
+    margin-bottom: 80px;
+    transform: scale(1.4);
+  }
+
+  #about-container {
+    margin-top: 20px;
+    transform: scale(1.4);
+  }
+  #contact-container {
+    margin-top: 10px;
+    transform: scale(1.4);
+    margin-bottom: 40px;
+  }
 }

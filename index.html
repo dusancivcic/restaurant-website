@@ -21,14 +21,33 @@
       href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Mali:wght@300&display=swap"
       rel="stylesheet"
     />
+    <script src="javascript/script.js"></script>
     <title>Restourant</title>
   </head>
   <body>
     <div class="container" id="banner-container">
-      <a href="#" class="nav-button"> Home </a>
-      <a href="#" class="nav-button"> Order </a>
-      <a href="#menu-container" class="nav-button"> Specials </a>
-      <a href="#botbar-container" class="nav-button"> Contact </a>
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <ul id="menu">
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>Order</li></a>
+            <a href="#menu-container"><li>Specials</li></a>
+            <a href="#botbar-container"><li>Contact</li></a>
+          </ul>
+        </div>
+      </nav>
+      <div id="desktop-nav" class="sidenav-desktop">
+        <a href="#" class="nav-button"> Home </a>
+        <a href="#" class="nav-button"> Order </a>
+        <a href="#menu-container" class="nav-button"> Specials </a>
+        <a href="#botbar-container" class="nav-button"> Contact </a>
+      </div>
       <div class="container" id="banner-container-text">
         <h1 id="banner-header">Welcome to our page</h1>
         <p id="banner-text">Fell free to order something</p>
@@ -51,7 +70,7 @@
           nemo quae.
         </p>
       </div>
-      <div class="restaurant" id="secound-restourant">
+      <div class="restaurant" id="second-restourant">
         <img
           class="restourant-image"
           src="images/restaurant-chocolat.jpg"
@@ -84,7 +103,7 @@
     </div>
     <h1 id="menu-header">Check why we are the best !</h1>
     <div class="container" id="menu-container">
-      <div class="menu-item-container">
+      <div class="menu-item-container" id="menu-container-drink">
         <img class="menu-image" src="images/drink.png" alt="Drink icon" />
         <h2 class="menu-header">Drinks</h2>
         <p class="menu-text">
@@ -94,7 +113,7 @@
           incidunt! Repellendus?
         </p>
       </div>
-      <div class="menu-item-container">
+      <div class="menu-item-container" id="menu-item-container-chef">
         <img
           class="menu-image"
           src="images/chef.png"
@@ -266,16 +285,13 @@
         src="images/spagheti.jpeg"
         alt="Picture of spagheti"
         style="margin-right: 0px"
+        id="spagheti-image"
       />
     </div>
     <h1 id="drink-container-header">Some drinks and meals for you</h1>
     <div id="drinks-and-meals-container">
       <div id="drinks-container">
-        <div
-          class="drink-container-part"
-          id="drink-container-part-one"
-          style="margin-left: 40px"
-        >
+        <div class="drink-container-part" id="drink-container-part-one">
           <img
             src="images/cocktail(1).png"
             alt="Fruit drink"
