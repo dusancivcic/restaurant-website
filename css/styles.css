@@ -19,9 +19,9 @@ body,
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  height: 100%;
   background-color: #69401f;
 }
+
 .btnTop {
   position: fixed;
   bottom: 20px;
@@ -36,6 +36,7 @@ html {
   font-family: "Oswald", sans-serif;
   background-color: rgba(139, 82, 16, 0.7);
   opacity: 0;
+  transition: opacity 300ms ease;
 }
 .btnTop.show {
   opacity: 1;
@@ -68,7 +69,7 @@ html {
 #banner-container {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
     url("../images/restaurant-image.jpg");
-  height: 60%;
+  height: 600px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -274,7 +275,7 @@ html {
   justify-content: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
     url("../images/shutterstock_1435374326.0.webp");
-  height: 50%;
+  height: 600px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
