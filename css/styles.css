@@ -37,6 +37,8 @@ html {
   background-color: rgba(139, 82, 16, 0.7);
   opacity: 0;
   transition: opacity 300ms ease;
+  cursor: pointer;
+  outline: none;
 }
 .btnTop.show {
   opacity: 1;
@@ -662,6 +664,11 @@ html {
     -webkit-user-select: none;
     user-select: none;
   }
+  .btnTop {
+    height: 60px;
+    width: 60px;
+    font-size: 30px;
+  }
 
   #menuToggle a {
     text-decoration: none;
@@ -1135,5 +1142,10 @@ html {
     margin-top: 10px;
     transform: scale(1.4);
     margin-bottom: 40px;
+  }
+  .btnTop {
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
   }
 }
