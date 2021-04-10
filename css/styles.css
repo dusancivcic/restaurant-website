@@ -11,6 +11,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 #menuToggle {
   display: none;
 }
@@ -20,6 +21,24 @@ html {
   overflow-x: hidden;
   height: 100%;
   background-color: #69401f;
+}
+.btnTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  font-size: 3em;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  color: white;
+  font-size: 35px;
+  font-family: "Oswald", sans-serif;
+  background-color: rgba(139, 82, 16, 0.7);
+  opacity: 0;
+}
+.btnTop.show {
+  opacity: 1;
 }
 .nav-button {
   margin-top: 10px;
